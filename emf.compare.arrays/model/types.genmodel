@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/emf.compare.arrays/src" modelPluginID="emf.compare.arrays"
+    modelName="Types" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false">
+  <foreignModel>types.ecore</foreignModel>
+  <genPackages prefix="Types" disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="types.ecore#//TestEnum">
+      <genEnumLiterals ecoreEnumLiteral="types.ecore#//TestEnum/Enum0"/>
+      <genEnumLiterals ecoreEnumLiteral="types.ecore#//TestEnum/Enum1"/>
+      <genEnumLiterals ecoreEnumLiteral="types.ecore#//TestEnum/Enum2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="types.ecore#//TestNextEnum">
+      <genEnumLiterals ecoreEnumLiteral="types.ecore#//TestNextEnum/Enum1"/>
+      <genEnumLiterals ecoreEnumLiteral="types.ecore#//TestNextEnum/Enum2"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="types.ecore#//LongArray"/>
+    <genDataTypes ecoreDataType="types.ecore#//StringArray"/>
+    <genClasses ecoreClass="types.ecore#//SingleTypes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/integer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/integerObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/long"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/longObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/double"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/doubleObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/float"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/floatObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/clazz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/charObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/byte"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/byteObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/byteArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/bigDecimal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/bigInteger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/enum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/stringArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/longArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//SingleTypes/nextEnum"/>
+    </genClasses>
+    <genClasses ecoreClass="types.ecore#//ManyTypes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/integerObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/long"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/doubleObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/floatObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/clazz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/charObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/byteObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/byteArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/bigDecimal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/bigInteger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/enum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/stringArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute types.ecore#//ManyTypes/longArray"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
