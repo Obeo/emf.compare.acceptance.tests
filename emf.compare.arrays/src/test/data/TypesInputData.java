@@ -7,6 +7,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 public class TypesInputData  extends AbstractInputData {
 	public Resource getXML() throws IOException {
-		return loadFromClassloader("xml2.xml"); //$NON-NLS-1$
+		return loadFromClassLoader("xml2.xml"); //$NON-NLS-1$
 	}
 }
