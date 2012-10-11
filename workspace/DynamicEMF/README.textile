@@ -1,0 +1,15 @@
+
+h1. Introduction
+
+These are test data to test dynamic instances of EMF.
+
+h1. Scenario
+
+* for each folder, select both .xmi files
+* click "compare with each other"
+* check every UI feature:
+** navigating in the diffs with the dedicated actions
+** double click on the diffs
+** merge the differences individualy
+** merge all the differences
+** apply new groups and filters

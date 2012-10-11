@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<testPackagePrefix:Container
+ xmi:version="2.0"
+  xmlns:xmi="http://www.omg.org/XMI"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:testPackagePrefix="testPackageURI" 
+     xsi:schemaLocation="testPackageURI test.ecore">
+    <content  name="default"/>
+  <content name="noAttributes"/>
+  <content name="extraAttribute">
+    <multi>1</multi>
+  </content>
+  <content name="missingAttribute">
+    <multi>1</multi>
+    <multi>2</multi>
+    <multi>3</multi>
+  </content>
+  <content name="attributesOrderIssue">
+    <multi>1</multi>
+    <multi>2</multi>
+    <multi>3</multi>
+  </content>
+  <content xsi:type="testPackagePrefix:TestElementB"
+      name="noReferences"/>
+  <content xsi:type="testPackagePrefix:TestElementB"
+      name="extraReference"/>
+  <content xsi:type="testPackagePrefix:TestElementB"
+      name="missingReference"/>
+  <content xsi:type="testPackagePrefix:TestElementB"
+      name="referenceOrderIssue"/>
+  <content name="onlyInDoc"/>
+    <content name="namaIssue"/>
+  <content name="TOREF1"/>
+  <content name="TOREF2"/>
+  <content name="TOREF3"/>
+    </testPackagePrefix:Container>
