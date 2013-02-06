@@ -5,7 +5,7 @@ Element-Name: FullTestSuite
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _jqSFAGrzEeK_JdLra2Bk5A
-Save-Time: 1/31/13 5:41 PM
+Save-Time: 2/6/13 3:54 PM
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
 Content-Type: text/testcase
@@ -15,5 +15,6 @@ _9VmgsGvEEeKSKM5olA1H5Q	// kind: 'suite' name: 'ts001_2-way' path: 'tests/ts001_
 _AZgWkGvFEeKSKM5olA1H5Q	// kind: 'suite' name: 'ts002_3-way' path: 'tests/ts002_3-way.suite'
 _DPGqsGvFEeKSKM5olA1H5Q	// kind: 'suite' name: 'ts003-filters' path: 'tests/ts003-filters.suite'
 _Fy0koGvFEeKSKM5olA1H5Q	// kind: 'suite' name: 'ts004-groups' path: 'tests/ts004-groups.suite'
+_nfxl8G9_EeKmUfxl9qSLpg	// kind: 'suite' name: 'ts005-egit' path: 'tests/ts005-egit.suite'
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
