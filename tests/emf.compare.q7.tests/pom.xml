@@ -76,6 +76,9 @@
 
 			<injections>
 			  <injection>
+				<site>http://download.eclipse.org/egit/updates</site>
+			  </injection>
+			  <injection>
 				<site>https://hudson.eclipse.org/hudson/job/emf-compare-master/lastSuccessfulBuild/artifact/packaging/org.eclipse.emf.compare.update/target/repository/</site>
 			  </injection>
 			</injections>

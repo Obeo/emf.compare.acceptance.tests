@@ -6,7 +6,7 @@ Element-Name: Library-EGit-Init
 Element-Type: context
 Element-Version: 2.0
 Id: _pj0X4HBcEeKTzKjv1SXOgA
-Save-Time: 2/6/13 2:15 PM
+Save-Time: 2/6/13 5:00 PM
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
@@ -40,7 +40,11 @@ get-window "Import Projects from Git Repository .*"
     | get-button "Next >" | click
 get-window "Import Projects from Git Repository .*" 
     | get-button Finish | click
-get-button Java | click
+get-button "Open Perspective" | click
+with [get-window "Open Perspective"] {
+    get-table | select "Java \\(default\\)"
+    get-button OK | click
+}
 with [get-view "Package Explorer" | get-tree] {
     get-item "library \\[emf-compare-library-egit master\\]" | get-property caption 
         | equals "library [emf-compare-library-egit master]" | verify-true
