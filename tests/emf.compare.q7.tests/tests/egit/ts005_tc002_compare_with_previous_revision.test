@@ -1,13 +1,13 @@
 --- Q7 testcase ---
 Format-Version: 1.0
 Q7-vendor: www.xored.com/q7
-Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_YvO_QG9-EeKmUfxl9qSLpg,_pj0X4HBcEeKTzKjv1SXOgA
-Element-Name: tc002_compare_with_previous_revision
+Contexts: _YvO_QG9-EeKmUfxl9qSLpg
+Element-Name: ts005_tc002_compare_with_previous_revision
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _yOSGQHBfEeKTzKjv1SXOgA
-Save-Time: 2/6/13 5:07 PM
+Save-Time: 2/7/13 3:22 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -45,14 +45,5 @@ with [get-view "Package Explorer" | get-tree] {
     get-item "library \\[emf-compare-library-egit master\\]" | get-property "getItems().TreeItem[0].getText()" 
         | equals "library.ecore" | verify-true
 }
-//Deletes the repository in order to clean the Git repositories view for the next test.
-get-button "Open Perspective" | click
-with [get-window "Open Perspective"] {
-    get-table | select "Git Repository Exploring"
-    get-button OK | click
-}
-get-view "Git Repositories" | get-tree 
-    | select "emf-compare-library-egit .*" 
-    | key-type Del
-get-window "Delete Repository" | get-button OK | click
+
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

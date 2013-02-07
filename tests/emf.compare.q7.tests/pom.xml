@@ -43,18 +43,6 @@
 	<q7-maven-version>1.2.9</q7-maven-version>
   </properties>
  
- <!--
-  <build>
-    <plugins>
-      <plugin>
-		<groupId>com.xored.q7</groupId>
-		<artifactId>q7-maven-plugin</artifactId>
-		<version>${q7-maven-version}</version>
-		<extensions>true</extensions>
-	  </plugin>
-    </plugins>
-  </build>
-  -->
   <profiles>
   <profile>
     <id>juno</id>
@@ -73,7 +61,6 @@
 			<groupId>eclipse</groupId>
 			<artifactId>sdk</artifactId>
 			<version>4.2.1</version>
-
 			<injections>
 			  <injection>
 				<site>http://download.eclipse.org/egit/updates</site>
@@ -83,6 +70,9 @@
 			  </injection>
 			</injections>
 		  </aut>
+		  <suites>
+		  	<suite>FullTestSuite</suite>
+		  </suites>
 		  <q7>
 			<version>${q7-runner-version}</version>
             <licenseFile>${project.basedir}/emfcompare-q7.runner.license</licenseFile>
@@ -110,16 +100,18 @@
 			<groupId>eclipse</groupId>
 			<artifactId>sdk</artifactId>
 			<version>3.7.0</version>
-
 			<injections>
 			  <injection>
 				<site>http://download.eclipse.org/egit/updates</site>
 			  </injection>
 			  <injection>
-				<site>https://hudson.eclipse.org/hudson/job/emf-compare-master/lastSuccessfulBuild/artifact/packaging/org.eclipse.emf.compare.update/target/repository/</site>
+				<site>https://hudson.eclipse.org/hudson/job/emf-compare-master/lastSuccessfulBuild/artifact/packaging/org.eclipse.emf.compare.update/target/repository/</site> 
 			  </injection>
 			</injections>
 		  </aut>
+		  <suites>
+		  	<suite>FullTestSuite</suite>
+		  </suites>
 		  <q7>
 			<version>${q7-runner-version}</version>
             <licenseFile>${project.basedir}/emfcompare-q7.runner.license</licenseFile>

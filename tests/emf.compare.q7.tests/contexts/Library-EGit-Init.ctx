@@ -6,7 +6,7 @@ Element-Name: Library-EGit-Init
 Element-Type: context
 Element-Version: 2.0
 Id: _pj0X4HBcEeKTzKjv1SXOgA
-Save-Time: 2/6/13 5:00 PM
+Save-Time: 2/7/13 2:27 PM
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
@@ -23,6 +23,26 @@ get-button "Open Perspective" | click
 with [get-window "Open Perspective"] {
     get-table | select "Git Repository Exploring"
     get-button OK | click
+}
+//Removes all existing repositories if needed
+try {
+	if  [get-view "Git Repositories" | get-tree | is-empty] {
+		// Do nothing
+	} -else {
+		with [get-view "Git Repositories" | get-tree] {
+			get-items | foreach {
+				select-item
+    				| get-menu "Remove Repository from View" | click
+    			try {
+    				get-window "Confirm Project Deletion" | get-button Yes | click
+    			} -catch {
+					// Do nothing
+				}
+			}
+		}
+	}
+} -catch {
+	// Do nothing
 }
 
 get-button "Add an existing local Git Repository to this view" | click
