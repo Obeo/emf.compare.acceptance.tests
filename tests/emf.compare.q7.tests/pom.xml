@@ -39,8 +39,8 @@
   </repositories>
   
   <properties>
-	<q7-runner-version>1.2.8-SNAPSHOT</q7-runner-version>
-	<q7-maven-version>1.2.7</q7-maven-version>
+	<q7-runner-version>1.2.9-SNAPSHOT</q7-runner-version>
+	<q7-maven-version>1.2.9</q7-maven-version>
   </properties>
  
  <!--
@@ -112,6 +112,9 @@
 			<version>3.7.0</version>
 
 			<injections>
+			  <injection>
+				<site>http://download.eclipse.org/egit/updates</site>
+			  </injection>
 			  <injection>
 				<site>https://hudson.eclipse.org/hudson/job/emf-compare-master/lastSuccessfulBuild/artifact/packaging/org.eclipse.emf.compare.update/target/repository/</site>
 			  </injection>
