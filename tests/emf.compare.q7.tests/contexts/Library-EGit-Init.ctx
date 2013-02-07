@@ -6,7 +6,7 @@ Element-Name: Library-EGit-Init
 Element-Type: context
 Element-Version: 2.0
 Id: _pj0X4HBcEeKTzKjv1SXOgA
-Save-Time: 2/7/13 6:11 PM
+Save-Time: 2/7/13 6:18 PM
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
@@ -68,6 +68,6 @@ with [get-window "Open Perspective"] {
 with [get-view "Package Explorer" | get-tree] {
     get-item "(> )?library .*" | get-property "getItems().length" | equals 1 | verify-true
     get-item "(> )?library .*" | get-property "getItems().TreeItem[0].getText()" 
-        | equals "library.ecore" | verify-true
+        | equals "(> )?library.ecore" | verify-true
 }
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--
