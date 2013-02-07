@@ -1,12 +1,13 @@
 --- Q7 testcase ---
 Format-Version: 1.0
 Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_jRtbsGrtEeK_JdLra2Bk5A
 Element-Name: ts003_tc004_filter_moved_elements
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ExtensionPointForFiltersAndGroups
 Id: _YAOtEGvBEeKSKM5olA1H5Q
-Save-Time: 2/7/13 3:22 PM
+Save-Time: 2/7/13 3:36 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
