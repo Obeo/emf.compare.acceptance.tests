@@ -5,7 +5,7 @@ Element-Name: ts001_2-way
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _9VmgsGvEEeKSKM5olA1H5Q
-Save-Time: 2/5/13 11:45 AM
+Save-Time: 2/11/13 10:58 AM
 Tags: 2-way
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -18,7 +18,9 @@ Test suite for 2-way comparison tests.
 Content-Type: text/testcase
 Entry-Name: testcase-items
 
-_p7kc4GrzEeK_JdLra2Bk5A	// kind: 'test' name: 'tc001_2-way_comparison' path: '2-way/tc001_2-way_comparison.test'
-_9HotAGxPEeKJJKFtItru4Q	// kind: 'test' name: 'tc002_2-way_synchro_smv_cmv' path: '2-way/tc002_2-way_synchro_smv_cmv.test'
+_p7kc4GrzEeK_JdLra2Bk5A	// kind: 'test' name: 'ts001_tc001_2-way_comparison' path: '2-way/ts001_tc001_2-way_comparison.test'
+_9HotAGxPEeKJJKFtItru4Q	// kind: 'test' name: 'ts001_tc002_2-way_synchro_smv_cmv' path: '2-way/ts001_tc002_2-way_synchro_smv_cmv.test'
+_gtcGYXQoEeKuJN51-cCI4Q	// kind: 'test' name: 'ts001_tc003_2-way_textual_attribute_comparison' path: '2-way/ts001_tc003_2-way_textual_attribute_comparison.test'
+_FRPBMHQuEeKuJN51-cCI4Q	// kind: 'test' name: 'ts001_tc004_2-way_next_difference' path: '2-way/ts001_tc004_2-way_next_difference.test'
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
