@@ -5,9 +5,9 @@ Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_jRtbsGrtEeK_JdLra2Bk5A
 Element-Name: ts001_tc004_2-way_next_difference
 Element-Type: testcase
 Element-Version: 3.0
-External-Reference: 
+External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=400424
 Id: _FRPBMHQuEeKuJN51-cCI4Q
-Save-Time: 2/11/13 10:58 AM
+Save-Time: 2/13/13 3:52 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa

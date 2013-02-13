@@ -1,0 +1,77 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_jRtbsGrtEeK_JdLra2Bk5A
+Element-Name: ts007_tc003_merge_reference_add_select_next_diff
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=400691
+Id: _5-gDkXXsEeKJx8j2cqlHSg
+Save-Time: 2/13/13 3:56 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+This test must validate after a merge of a reference, the next difference is selected.
+
+TEST STEPS
+	1) Select the 2 ecore models and run a 2-way comparison (select extlibraryLeft.ecore and extLibraryRight.ecore) 
+	//asserts that the 2 models are selected and the last one (extLibraryOrigin.ecore) is not.
+	2) Double-click on the reference item value Dictionary of the enum BookCategory.
+	//asserts that the left part of the content merge viewer contains 7 items and the text "Dictionary = 4" is selected, and right part contains 7 items and the text "" is selected.
+	3) Click on "Copy Current Change from Right to Left" button.
+	//asserts that the next difference is selected in the structure merge viewer and in the content merge viewer.
+	
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Package Explorer" | get-tree | select "Library/extlibraryLeft.ecore" "Library/extlibraryRight.ecore"
+with [get-view "Package Explorer" | get-tree] {
+    get-item "Library/extlibraryRight.ecore" | get-property selected | equals true | verify-true
+    get-item "Library/extlibraryLeft.ecore" | get-property selected | equals true | verify-true
+    get-item "Library/extlibraryOrigin.ecore" | get-property selected | equals false | verify-true
+    get-menu "Compare With/Each Other" | click
+}
+
+get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree 
+    | select "extlibrary/BookCategory/Dictionary = 4 \\[eLiterals add\\]" | double-click
+with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
+    with [get-table] {
+        get-property itemCount | equals 7 | verify-true
+        get-item "Dictionary = 4" | get-property selected | equals true | verify-true
+    }
+    with [get-table -after [get-label "eLiterals : EEnumLiteral" -after [get-label BookCategory 
+        -after [get-label "eLiterals : EEnumLiteral"]]]] {
+        get-property itemCount | equals 7 | verify-true
+        get-item "" -index 1 | get-property selected | equals true | verify-true
+    }
+}
+
+with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
+    get-tree | get-item "extlibrary/BookCategory/Dictionary = 4 \\[eLiterals add\\]" | get-property selected 
+        | equals true | verify-true
+    get-table | get-item "Dictionary = 4" | get-property selected | equals true | verify-true
+    with [get-table -after [get-label "eLiterals : EEnumLiteral" -after [get-label BookCategory 
+        -after [get-label "eLiterals : EEnumLiteral"]]]] {
+        get-item "" -index 1 | get-property index | equals 4 | verify-true
+        get-item "" -index 1 | get-property selected | equals true | verify-true
+    }
+}
+
+get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-button "Copy Current Change from Left to Right" | click
+with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
+    get-tree | get-item "extlibrary/BookCategory/Encyclopedia = 3 \\[eLiterals add\\]" | get-property selected 
+        | equals true | verify-true
+    get-table | get-item "Encyclopedia = 3" | get-property selected | equals true | verify-true
+    with [get-table -after [get-label "eLiterals : EEnumLiteral" -after [get-label BookCategory 
+        -after [get-label "eLiterals : EEnumLiteral"]]]] {
+        get-item "" | get-property index | equals 3 | verify-true
+        get-item "" | get-property selected | equals true | verify-true
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
