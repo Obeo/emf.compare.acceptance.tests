@@ -63,6 +63,13 @@
 			<version>4.2.1</version>
 			<injections>
 			  <injection>
+				<site>http://download.eclipse.org/releases/juno/</site>
+				<features>
+                 <feature>org.eclipse.emf.sdk.feature.group</feature>
+                 <feature>org.eclipse.uml2.sdk.feature.group</feature>
+            	</features>
+			  </injection>
+			  <injection>
 				<site>http://download.eclipse.org/egit/updates</site>
 			  </injection>
 			  <injection>

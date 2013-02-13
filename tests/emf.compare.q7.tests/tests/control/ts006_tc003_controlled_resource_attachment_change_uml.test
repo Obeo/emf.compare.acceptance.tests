@@ -1,0 +1,62 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_ICBW0HUrEeKHfa7Gozlrbw
+Element-Name: ts006_tc003_controlled_resource_attachment_change_uml
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _FaO1MHUrEeKHfa7Gozlrbw
+Save-Time: 2/12/13 5:19 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+This test must validate a resource attachment change in a controlled resource.
+
+TEST STEPS
+	1) Select the 2 uml models and run a 2-way comparison (select left.uml and right.uml)
+	2) There must be only one difference in the editor : a resource attachment change difference under a match resource item matching the fragmented resources.
+		//asserts that the structure merge viewer contains only one difference under the match resource item.
+	3) Double-click on the difference. The content merge viewer must show the contents of the fragmented resources and the difference must be selected.
+		//asserts that the content merge viewer shows the contents of the fragmented resources and that the difference is selected.
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Package Explorer" | get-tree] {
+    select "ControlledResourceAttachmentChange/left.uml" "ControlledResourceAttachmentChange/right.uml"
+    get-menu "Compare With/Each Other" | click
+}
+get-editor "Compare (\'ControlledResourceAttachmentChange/left.uml\' - \'ControlledResourceAttachmentChange/right.uml\')" 
+    | get-tree | select "leftFragment.uml <-> rightFragment.uml/<Package> package5 \\[resource contents delete\\]" 
+    | double-click
+with [get-editor "Compare (\'ControlledResourceAttachmentChange/left.uml\' - \'ControlledResourceAttachmentChange/right.uml\')"] {
+    with [get-tree] {
+        get-property itemCount | equals 1 | verify-true
+        get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" 
+            | equals "<Package> package5 [resource contents delete]" | verify-true
+        get-property "getItems().TreeItem[0].getText()" | equals "leftFragment.uml <-> rightFragment.uml" | verify-true
+        get-property "getItems().TreeItem[0].getItemCount()" | equals 1 | verify-true
+    }
+    with [get-table] {
+        get-item "" | get-property index | equals 2 | verify-true
+        get-item "" | get-property selected | equals true | verify-true
+        get-item "" | get-property "getText()" | equals "" | verify-true
+    }
+    with [get-table -after [get-label "resource contents" 
+        -after [get-label "platform:/resource/ControlledResourceAttachmentChange/rightFragment.uml"]]] {
+        get-item "<Package> package5" | get-property index | equals 2 | verify-true
+        get-item "<Package> package5" | get-property selected | equals true | verify-true
+        get-item "<Package> package5" | get-property "getText()" | equals "<Package> package5" | verify-true
+    }
+    get-label "platform:/resource/ControlledResourceAttachmentChange/leftFragment.uml" | get-property caption 
+        | equals "platform:/resource/ControlledResourceAttachmentChange/leftFragment.uml" | verify-true
+    get-label "platform:/resource/ControlledResourceAttachmentChange/rightFragment.uml" | get-property caption 
+        | equals "platform:/resource/ControlledResourceAttachmentChange/rightFragment.uml" | verify-true
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
