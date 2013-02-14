@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _egRlQHH5EeKUuY9Bwmpkkw
-Save-Time: 2/8/13 3:52 PM
+Save-Time: 2/14/13 3:27 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -48,11 +48,14 @@ with [get-editor "library.ecore" | get-tree] {
 with [get-view Properties | get-tree] {
     select Name | activate-cell-edit -column 1
     get-editbox | set-text Writer
+    wait 500
 }
 get-editor "library.ecore" | get-tree | key-type "M1+s"
-get-view Problems | click
+wait 500
+get-editor "library.ecore" | get-tree 
+    | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getItems().TreeItem[1].getText()" | equals Writer 
+    | verify-true
 get-editor "library.ecore" | close
-
 
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Replace With/Local History..." | click
