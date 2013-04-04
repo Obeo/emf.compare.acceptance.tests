@@ -1,0 +1,144 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_jRtbsGrtEeK_JdLra2Bk5A
+Element-Name: ts004_tc005_by_side_conflicts
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: __z4R4ZxUEeK1qPdYnWkCpA
+Save-Time: 4/4/13 2:00 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Package Explorer" | get-tree] {
+    select "Library/extlibraryLeft.ecore" "Library/extlibraryOrigin.ecore" "Library/extlibraryRight.ecore"
+    get-menu "Compare With/Each Other" | click
+    get-item "Library/extlibraryLeft.ecore" | get-property selected | equals true | verify-true
+    get-item "Library/extlibraryOrigin.ecore" | get-property selected | equals true | verify-true
+    get-item "Library/extlibraryRight.ecore" | get-property selected | equals true | verify-true
+}
+
+with [get-window "Select Common Ancestor"] {
+    get-button "\'/Library/extlibraryOrigin.ecore\'" | click
+    get-button OK | click
+}
+
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-button Groups | click -arrow
+get-menu "By Side" | click
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-tree | select "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | expand-all
+with [get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-tree] {
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | get-property caption 
+        | equals "Conflicts [11 real and 4 pseudo unresolved differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | get-property "getItems().length" 
+        | equals 3 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[1].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getText()" | equals "Real conflict [2 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItemCount()" | equals 2 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItems().TreeItem[0].getItems().TreeItem[0].getItems().length" 
+        | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 0 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItems().TreeItem[0].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItems().TreeItem[0].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItems().TreeItem[1].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getText()" | equals "Real conflict [7 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItemCount()" | equals 2 | verify-true
+}
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-button Filters | click -arrow
+get-menu "Pseudo conflicts differences" | click
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-button Filters | click -arrow
+get-menu "Pseudo delete conflicts differences" | click
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-button Filters | click -arrow
+get-menu "Sub diff elements" | click
+get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-tree | select "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | expand-all
+with [get-editor "Compare (\'Library/extlibraryRight.ecore\' - \'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
+    | get-tree] {
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 0 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[1].getItems().TreeItem[0].getItemCount()" | equals 0 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItems().TreeItem[1].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getText()" | equals "Pseudo conflict [4 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[0].getItemCount()" | equals 2 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItems().TreeItem[0].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItems().TreeItem[1].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getText()" | equals "Real conflict [2 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[1].getItemCount()" | equals 2 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 0 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItems().TreeItem[0].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getText()" | equals "Real conflict [2 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[2].getItemCount()" | equals 1 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" 
+        | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[0].getItems().TreeItem[1].getItemCount()" 
+        | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[0].getItemCount()" | equals 2 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[1].getItems().TreeItem[0].getItemCount()" 
+        | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[1].getItems().TreeItem[1].getItemCount()" 
+        | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[1].getItemCount()" | equals 2 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItems().TreeItem[2].getItemCount()" | equals 0 
+        | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[0].getItemCount()" | equals 3 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getItems().TreeItem[1].getItemCount()" | equals 0 | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" 
+        | get-property "getItems().TreeItem[3].getText()" | equals "Real conflict [7 differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | get-property "getText()" 
+        | equals "Conflicts [11 real and 4 pseudo unresolved differences]" | verify-true
+    get-item "Conflicts \\[11 real and 4 pseudo unresolved differences\\]" | get-property "getItemCount()" | equals 4 
+        | verify-true
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
