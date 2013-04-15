@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ExtensionPointForFiltersAndGroups
 Id: _wIr-AGvFEeKSKM5olA1H5Q
-Save-Time: 3/12/13 5:28 PM
+Save-Time: 4/15/13 3:08 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -39,8 +39,8 @@ get-menu "By Kind" | click
 with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree] {
     get-property "getItems().length" | equals 4 | verify-true
     get-property "getItems().TreeItem[0].getText()" | equals "Additions.*" | verify-true
-    get-property "getItems().TreeItem[1].getText()" | equals "Changes.*" | verify-true
-    get-property "getItems().TreeItem[2].getText()" | equals "Deletions.*" | verify-true
+    get-property "getItems().TreeItem[1].getText()" | equals "Deletions.*" | verify-true
+    get-property "getItems().TreeItem[2].getText()" | equals "Changes.*" | verify-true
     get-property "getItems().TreeItem[3].getText()" | equals "Moves.*" | verify-true
 }
 
