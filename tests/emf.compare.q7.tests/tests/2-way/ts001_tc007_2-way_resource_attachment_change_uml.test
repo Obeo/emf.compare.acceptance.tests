@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ProvideContentMergeViewerForResourceAttachmentChanges
 Id: _CV2a0HUCEeKHfa7Gozlrbw
-Save-Time: 4/15/13 4:35 PM
+Save-Time: 4/23/13 11:49 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -42,24 +42,31 @@ with [get-editor "Compare (\'SimpleResourceAttachmentChange/left.uml\' - \'Simpl
 }
 get-editor "Compare (\'SimpleResourceAttachmentChange/left.uml\' - \'SimpleResourceAttachmentChange/right.uml\')" 
     | get-tree | select "left.uml <-> right.uml/<Model> new root \\[resource contents delete\\]" | double-click
-with [get-editor "Compare (\'SimpleResourceAttachmentChange/left.uml\' - \'SimpleResourceAttachmentChange/right.uml\')"] {
-    with [get-table] {
-        get-property itemCount | equals 2 | verify-true
-        get-property "getItems().TableItem[0].getText()" | equals "<Model> root" | verify-true
-        get-property "getItems().TableItem[1].getText()" | equals "" | verify-true
-    }
-    with [get-table -after [get-label "resource contents" 
-        -after [get-label "platform:/resource/SimpleResourceAttachmentChange/right.uml"]]] {
-        get-property itemCount | equals 2 | verify-true
-        get-property "getItems().TableItem[0].getText()" | equals "<Model> root" | verify-true
-        get-property "getItems().TableItem[1].getText()" | equals "<Model> new root" | verify-true
-    }
-}
 
 with [get-editor "Compare (\'SimpleResourceAttachmentChange/left.uml\' - \'SimpleResourceAttachmentChange/right.uml\')"] {
-    get-table -after [get-label "resource contents" 
-        -after [get-label "platform:/resource/SimpleResourceAttachmentChange/right.uml"]] | get-item "<Model> new root" 
-        | get-property selected | equals true | verify-true
-    get-table | get-item " " | get-property selected | equals true | verify-true
+    with [get-tree -after [get-label "SimpleResourceAttachmentChange/right.uml"]] {
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/left.uml" | get-property childCount 
+            | equals 2 | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/left.uml/<Model> root" 
+            | get-property selected | equals false | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/left.uml/<Model> root" 
+            | get-property childCount | equals 0 | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/left.uml/ " | get-property selected 
+            | equals true | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/left.uml/ " | get-property childCount 
+            | equals 0 | verify-true
+    }
+    with [get-tree -after [get-label "SimpleResourceAttachmentChange/right.uml"] -index 1] {
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/right.uml" | get-property childCount 
+            | equals 2 | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/right.uml/<Model> root" 
+            | get-property selected | equals false | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/right.uml/<Model> root" 
+            | get-property childCount | equals 0 | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/right.uml/<Model> new root" 
+            | get-property selected | equals true | verify-true
+        get-item "platform:\\/resource\\/SimpleResourceAttachmentChange\\/right.uml/<Model> new root" 
+            | get-property childCount | equals 0 | verify-true
+    }
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

@@ -5,7 +5,7 @@ Element-Name: ts003-filters
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _DPGqsGvFEeKSKM5olA1H5Q
-Save-Time: 3/12/13 5:12 PM
+Save-Time: 4/24/13 1:40 PM
 Tags: Filters
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -21,7 +21,6 @@ Entry-Name: testcase-items
 _SAOigXaCEeKMw-FYxgWKUg	// kind: 'test' name: 'ts003_tc005_filter_empty_resource_mappings' path: 'filters/ts003_tc005_filter_empty_resource_mappings.test'
 _s-AmMX9XEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc006_filter_identical_elements' path: 'filters/ts003_tc006_filter_identical_elements.test'
 _MSeSMH9ZEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc007_filter_pseudo_elements' path: 'filters/ts003_tc007_filter_pseudo_elements.test'
-_sjJGwH9lEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc008_filter_pseudo_delete_elements' path: 'filters/ts003_tc008_filter_pseudo_delete_elements.test'
 _tjHgkH9mEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc009_filter_sub_differences' path: 'filters/ts003_tc009_filter_sub_differences.test'
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

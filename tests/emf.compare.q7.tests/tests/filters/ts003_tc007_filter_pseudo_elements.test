@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ExtensionPointForFiltersAndGroups
 Id: _MSeSMH9ZEeKUoNuS0eHQtA
-Save-Time: 4/15/13 3:34 PM
+Save-Time: 4/23/13 1:52 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -46,31 +46,31 @@ get-editor "Compare (\'PseudoConflictsFilter/right.ecore\' - \'PseudoConflictsFi
     | get-button Filters | click -arrow
 get-menu "Pseudo conflicts differences" | click
 get-editor "Compare (\'PseudoConflictsFilter/right.ecore\' - \'PseudoConflictsFilter/left.ecore\' - \'PseudoConflictsFilter/right.ecore\')" 
-    | get-tree | select extlibrary | expand-all
+    | get-tree | select "> extlibrary" | expand-all
     
 with [get-editor "Compare (\'PseudoConflictsFilter/right.ecore\' - \'PseudoConflictsFilter/left.ecore\' - \'PseudoConflictsFilter/right.ecore\')" 
     | get-tree] {
-    get-item extlibrary | get-property childCount | equals 7 | verify-true
-    get-item "extlibrary/Book" | get-property index | equals 0 | verify-true
-    get-item "extlibrary/Book" | get-property childCount | equals 2 | verify-true
-    get-item "extlibrary/Library" | get-property index | equals 1 | verify-true
-    get-item "extlibrary/Library" | get-property childCount | equals 1 | verify-true
-    get-item "extlibrary/Library" | get-property "getItems().TreeItem[0].getItems().length" | equals 6 | verify-true
-    get-item "extlibrary/Periodical \\[eClassifiers move\\]" | get-property index | equals 3 | verify-true
-    get-item "extlibrary/Periodical \\[eClassifiers move\\]" | get-property childCount | equals 0 | verify-true
-    get-item extlibrary | get-item "Periodical \\[eClassifiers move\\]" -index 1 | get-property index | equals 5 
+    get-item "> extlibrary" | get-property childCount | equals 10 | verify-true
+    get-item "> extlibrary/> Book" | get-property index | equals 0 | verify-true
+    get-item "> extlibrary/> Book" | get-property childCount | equals 2 | verify-true
+    get-item "> extlibrary/> Library" | get-property index | equals 2 | verify-true
+    get-item "> extlibrary/> Library" | get-property childCount | equals 1 | verify-true
+    get-item "> extlibrary/> Library" | get-property "getItems().TreeItem[0].getItems().length" | equals 6 | verify-true
+    get-item "> extlibrary/Periodical \\[eClassifiers move\\]" | get-property index | equals 4 | verify-true
+    get-item "> extlibrary/Periodical \\[eClassifiers move\\]" | get-property childCount | equals 0 | verify-true
+    get-item "> extlibrary" | get-item "Periodical \\[eClassifiers move\\]" -index 1 | get-property index | equals 6 
         | verify-true
-    get-item extlibrary | get-item "Periodical \\[eClassifiers move\\]" -index 1 | get-property childCount | equals 0 
+    get-item "> extlibrary" | get-item "Periodical \\[eClassifiers move\\]" -index 1 | get-property childCount | equals 0 
         | verify-true
-    get-item "extlibrary/VideoCassette" | get-property index | equals 2 | verify-true
-    get-item "extlibrary/VideoCassette" | get-property childCount | equals 1 | verify-true
-    get-item "extlibrary/VideoCassette" | get-property "getItems().TreeItem[0].getItems().length" | equals 6 
+    get-item "> extlibrary/> VideoCassette" | get-property index | equals 3 | verify-true
+    get-item "> extlibrary/> VideoCassette" | get-property childCount | equals 1 | verify-true
+    get-item "> extlibrary/> VideoCassette" | get-property "getItems().TreeItem[0].getItems().length" | equals 6 
         | verify-true
-    get-item "extlibrary/Writer \\[eClassifiers add\\]" | get-property index | equals 4 | verify-true
-    get-item "extlibrary/Writer \\[eClassifiers add\\]" | get-property childCount | equals 0 | verify-true
-    get-item extlibrary | get-item "Writer \\[eClassifiers add\\]" -index 1 | get-property index | equals 6 
+    get-item "> extlibrary/Writer \\[eClassifiers add\\]" | get-property index | equals 5 | verify-true
+    get-item "> extlibrary/Writer \\[eClassifiers add\\]" | get-property childCount | equals 0 | verify-true
+    get-item "> extlibrary" | get-item "Writer \\[eClassifiers add\\]" -index 1 | get-property index | equals 7 
         | verify-true
-    get-item extlibrary | get-item "Writer \\[eClassifiers add\\]" -index 1 | get-property childCount | equals 0 
+    get-item "> extlibrary" | get-item "Writer \\[eClassifiers add\\]" -index 1 | get-property childCount | equals 0 
         | verify-true
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

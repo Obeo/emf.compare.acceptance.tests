@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _tLzyIHRVEeKuJN51-cCI4Q
-Save-Time: 2/25/13 3:18 PM
+Save-Time: 4/24/13 2:03 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -39,7 +39,7 @@ with [get-editor "Compare (\'ChangeInFragmentsOnly/left/My.ecore\' - \'ChangeInF
     get-property "getItems().TreeItem[0].getItems().length" | equals 1 | verify-true
     get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" | equals "fragmentedLeft [name changed]" 
         | verify-true
-    get-property "getItems().TreeItem[0].getText()" | equals fragmentedLeft | verify-true
+    get-property "getItems().TreeItem[0].getText()" | equals "> fragmentedLeft" | verify-true
 }
 get-editor "Compare (\'ChangeInFragmentsOnly/left/My.ecore\' - \'ChangeInFragmentsOnly/right/My.ecore\')" 
     | get-button Filters | click -arrow
@@ -48,7 +48,7 @@ with [get-editor "Compare (\'ChangeInFragmentsOnly/left/My.ecore\' - \'ChangeInF
     | get-tree] {
     get-property className | equals "org.eclipse.swt.widgets.Tree" | verify-true
     get-property itemCount | equals 2 | verify-true
-    get-property "getItems().TreeItem[0].getText()" | equals fragmentedLeft | verify-true
+    get-property "getItems().TreeItem[0].getText()" | equals "> fragmentedLeft" | verify-true
     get-property "getItems().TreeItem[1].getText()" | equals "left/test.frag <-> right/test.frag" | verify-true
 }
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

@@ -70,7 +70,7 @@
             	</features>
 			  </injection>
 			  <injection>
-				<site>http://download.eclipse.org/egit/updates</site>
+				<site>http://download.eclipse.org/egit/updates-nightly</site>
 			  </injection>
 			  <injection>
 				<site>https://hudson.eclipse.org/hudson/job/emf-compare-master/lastSuccessfulBuild/artifact/packaging/org.eclipse.emf.compare.update/target/repository/</site>

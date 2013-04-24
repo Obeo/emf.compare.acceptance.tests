@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=400424
 Id: _FRPBMHQuEeKuJN51-cCI4Q
-Save-Time: 2/13/13 3:52 PM
+Save-Time: 4/23/13 11:41 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -36,29 +36,38 @@ with [get-view "Package Explorer" | get-tree] {
     get-menu "Compare With/Each Other" | click
 }
 get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
+
+get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-button Filters 
+    | click -arrow
+get-menu "Sub diff elements" | click
 with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
-    get-tree | select extlibrary | double-click
+    get-tree | select "> extlibrary/> BookCategory/Manhwa = 5 \\[eLiterals delete\\]" | double-click
     with [get-button "Next Difference"] {
         click
         click
     }
+    get-button "Next Difference" | click
 }
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree 
-    | get-item "extlibrary/AudioVisualItem -> CirculatingItem/length : EInt/length \\[name changed\\]" 
+    | get-item "> extlibrary/> AudioVisualItem -> CirculatingItem/> length : EInt/length \\[name changed\\]" 
     | get-property selected | equals true | verify-true
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
     | get-button "Next Difference" | click
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree 
-    | get-item "extlibrary/AudioVisualItem -> CirculatingItem/title : EString \\[eStructuralFeatures add\\]" 
+    | get-item "> extlibrary/> AudioVisualItem -> CirculatingItem/TitledItem \\[eSuperTypes delete\\]" 
     | get-property selected | equals true | verify-true
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
     | get-button "Next Difference" | click
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree 
-    | get-item "extlibrary/AudioVisualItem -> CirculatingItem/title : EString \\[eStructuralFeatures add\\]/EString \\[java.lang.String\\] \\[eType set\\]" 
+    | get-item "> extlibrary/> AudioVisualItem -> CirculatingItem/title : EString \\[eStructuralFeatures add\\]" 
     | get-property selected | equals true | verify-true
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" 
     | get-button "Next Difference" | click
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-tree 
-    | get-item "extlibrary/AudioVisualItem -> CirculatingItem/TitledItem \\[eSuperTypes delete\\]" 
+    | get-item "> extlibrary/> AudioVisualItem -> CirculatingItem/title : EString \\[eStructuralFeatures add\\]/EString \\[java.lang.String\\] \\[eType set\\]" 
     | get-property selected | equals true | verify-true
+
+    
+
+
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
