@@ -9,13 +9,6 @@ ts001_2-way :
 			    (https://bugs.eclipse.org/bugs/show_bug.cgi?id=400424)
 
 -------------------------------------------------------------------------------
-ts005_egit :
--------------------------------------------------------------------------------
-
-* ts005_tc004 : there are too many results displayed in the structure merge viewer.
-* ts005_tc005 : there are too many results displayed in the structure merge viewer.
-
--------------------------------------------------------------------------------
 ts007_merge :
 -------------------------------------------------------------------------------
 
