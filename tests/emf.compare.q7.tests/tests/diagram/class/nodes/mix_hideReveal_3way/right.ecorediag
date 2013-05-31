@@ -24,7 +24,7 @@
     <element xmi:type="ecore:EClass" href="right.ecore#//A"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ehBBErx0EeKVx5hqK1YKIg" x="204" y="268"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_grfUkLx0EeKVx5hqK1YKIg" type="1001" visible="false">
+  <children xmi:type="notation:Node" xmi:id="_grfUkLx0EeKVx5hqK1YKIg" visible="false" type="1001">
     <children xmi:type="notation:Node" xmi:id="_grfUk7x0EeKVx5hqK1YKIg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_grfUlLx0EeKVx5hqK1YKIg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_6Gc2kLx1EeKVx5hqK1YKIg" type="2001">
@@ -48,7 +48,7 @@
     <element xmi:type="ecore:EClass" href="right.ecore#//B"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_grfUkrx0EeKVx5hqK1YKIg" x="502" y="378"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_h-plkLx0EeKVx5hqK1YKIg" type="1001" visible="false">
+  <children xmi:type="notation:Node" xmi:id="_h-plkLx0EeKVx5hqK1YKIg" visible="false" type="1001">
     <children xmi:type="notation:Node" xmi:id="_h-vsMLx0EeKVx5hqK1YKIg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_h-vsMbx0EeKVx5hqK1YKIg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_4yDPcLx1EeKVx5hqK1YKIg" type="2001">

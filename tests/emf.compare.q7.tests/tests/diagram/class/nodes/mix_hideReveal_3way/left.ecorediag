@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_cDXS4Lx0EeKVx5hqK1YKIg" type="EcoreTools" name="ancestor" measurementUnit="Pixel">
-  <children xmi:type="notation:Node" xmi:id="_ehBBELx0EeKVx5hqK1YKIg" type="1001" visible="false">
+  <children xmi:type="notation:Node" xmi:id="_ehBBELx0EeKVx5hqK1YKIg" visible="false" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ehBBE7x0EeKVx5hqK1YKIg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_ehBBFLx0EeKVx5hqK1YKIg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_XfAsALx2EeKVx5hqK1YKIg" type="2001">
@@ -72,7 +72,7 @@
     <element xmi:type="ecore:EClass" href="left.ecore#//C"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h-plkrx0EeKVx5hqK1YKIg" x="584" y="95"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_i0V3cLx0EeKVx5hqK1YKIg" type="1001" visible="false">
+  <children xmi:type="notation:Node" xmi:id="_i0V3cLx0EeKVx5hqK1YKIg" visible="false" type="1001">
     <children xmi:type="notation:Node" xmi:id="_i0V3c7x0EeKVx5hqK1YKIg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_i0V3dLx0EeKVx5hqK1YKIg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_V7QaQLx2EeKVx5hqK1YKIg" type="2001">
