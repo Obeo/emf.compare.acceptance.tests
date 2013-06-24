@@ -6,7 +6,7 @@ Element-Name: Library-EGit-Init
 Element-Type: context
 Element-Version: 2.0
 Id: _pj0X4HBcEeKTzKjv1SXOgA
-Save-Time: 2/13/13 10:46 AM
+Save-Time: 6/24/13 10:37 AM
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
@@ -21,7 +21,7 @@ Entry-Name: .ecl.context
 
 get-button "Open Perspective" | click
 with [get-window "Open Perspective"] {
-    get-table | select "Git Repository Exploring"
+    get-table | select "Git"
     get-button OK | click
 }
 //Removes all existing repositories if needed

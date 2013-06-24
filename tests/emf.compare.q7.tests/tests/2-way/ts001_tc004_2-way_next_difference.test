@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=400424
 Id: _FRPBMHQuEeKuJN51-cCI4Q
-Save-Time: 4/23/13 11:41 AM
+Save-Time: 6/24/13 9:47 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -39,7 +39,7 @@ get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-
 
 get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')" | get-button Filters 
     | click -arrow
-get-menu "Sub diff elements" | click
+get-menu "Cascading differences" | click
 with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
     get-tree | select "> extlibrary/> BookCategory/Manhwa = 5 \\[eLiterals delete\\]" | double-click
     with [get-button "Next Difference"] {

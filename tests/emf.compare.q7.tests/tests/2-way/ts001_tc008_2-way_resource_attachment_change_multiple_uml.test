@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ProvideContentMergeViewerForResourceAttachmentChanges
 Id: _oh4VYHUgEeKHfa7Gozlrbw
-Save-Time: 4/23/13 11:53 AM
+Save-Time: 6/24/13 10:24 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -55,9 +55,9 @@ get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleR
 with [get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleResourceAttachmentChange/right.uml\')"] {
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"]] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml" | get-property childCount 
-            | equals 4 | verify-true
+            | equals 3 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> new root left" 
-            | get-property index | equals 2 | verify-true
+            | get-property index | equals 0 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> new root left" 
             | get-property selected | equals true | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> new root left" 
@@ -65,12 +65,12 @@ with [get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'Mul
     }
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"] -index 1] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-property childCount 
-            | equals 4 | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/ " | get-property index 
+            | equals 3 | verify-true
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/                                          " | get-property index 
             | equals 1 | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/ " | get-property selected 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/                                          " | get-property selected 
             | equals true | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/ " | get-property childCount 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/                                          " | get-property childCount 
             | equals 0 | verify-true
     }
 }
@@ -80,9 +80,9 @@ get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleR
 with [get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleResourceAttachmentChange/right.uml\')"] {
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"]] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml" | get-property childCount 
-            | equals 4 | verify-true
+            | equals 3 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> another new root left" 
-            | get-property index | equals 3 | verify-true
+            | get-property index | equals 2 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> another new root left" 
             | get-property selected | equals true | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/<Model> another new root left" 
@@ -90,12 +90,12 @@ with [get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'Mul
     }
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"] -index 1] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-property childCount 
-            | equals 4 | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item " " -index 1 
+            | equals 3 | verify-true
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item "                                          " -index 1 
             | get-property index | equals 2 | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item " " -index 1 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item "                                          " -index 1 
             | get-property selected | equals true | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item " " -index 1 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-item "                                          " -index 1 
             | get-property childCount | equals 0 | verify-true
     }
 }
@@ -104,19 +104,19 @@ get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleR
 with [get-editor "Compare (\'MultipleResourceAttachmentChange/left.uml\' - \'MultipleResourceAttachmentChange/right.uml\')"] {
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"]] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml" | get-property childCount 
-            | equals 4 | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/ " | get-property index | equals 1 
+            | equals 3 | verify-true
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/                                          " | get-property index | equals 1 
             | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/ " | get-property selected 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/                                          " | get-property selected 
             | equals true | verify-true
-        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/ " | get-property childCount 
+        get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml/                                          " | get-property childCount 
             | equals 0 | verify-true
     }
     with [get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"] -index 1] {
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml" | get-property childCount 
-            | equals 4 | verify-true
+            | equals 3 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/<Model> new root right" 
-            | get-property index | equals 3 | verify-true
+            | get-property index | equals 0 | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/<Model> new root right" 
             | get-property selected | equals true | verify-true
         get-item "platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml/<Model> new root right" 
