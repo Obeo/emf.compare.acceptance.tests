@@ -5,7 +5,7 @@ Element-Name: ts003-filters
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _DPGqsGvFEeKSKM5olA1H5Q
-Save-Time: 6/24/13 10:34 AM
+Save-Time: 6/25/13 10:02 AM
 Tags: Filters
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -22,5 +22,10 @@ _SAOigXaCEeKMw-FYxgWKUg	// kind: 'test' name: 'ts003_tc005_filter_empty_resource
 _s-AmMX9XEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc006_filter_identical_elements' path: 'filters/ts003_tc006_filter_identical_elements.test'
 _MSeSMH9ZEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc007_filter_pseudo_elements' path: 'filters/ts003_tc007_filter_pseudo_elements.test'
 _tjHgkH9mEeKUoNuS0eHQtA	// kind: 'test' name: 'ts003_tc009_filter_cascading_differences' path: 'filters/ts003_tc009_filter_cascading_differences.test'
+_cIy3INzOEeKf2cO4w_2o0w	// kind: 'test' name: 'ts003_tc001_filter_identical_elements_cmv' path: 'filters/ts003_tc001_filter_identical_elements_cmv.test'
+__QqOYIAsEeKoeMXPKKjx4w	// kind: 'test' name: 'ts003_tc010_filter_uml_refined_elements' path: 'filters/ts003_tc010_filter_uml_refined_elements.test'
+_WnxWMNzcEeKf2cO4w_2o0w	// kind: 'test' name: 'ts003_tc002_filter_pseudo_elements_cmv' path: 'filters/ts003_tc002_filter_pseudo_elements_cmv.test'
+_wkq1sNzfEeKf2cO4w_2o0w	// kind: 'test' name: 'ts003_tc003_filter_cascading_differences_cmv' path: 'filters/ts003_tc003_filter_cascading_differences_cmv.test'
+_OrwU4N1rEeKlP8eyY8UqWw	// kind: 'test' name: 'ts003_tc004_filter_uml_refined_elements_cmv' path: 'filters/ts003_tc004_filter_uml_refined_elements_cmv.test'
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

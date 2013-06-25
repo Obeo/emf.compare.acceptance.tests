@@ -7,20 +7,20 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ExtensionPointForFiltersAndGroups
 Id: _tjHgkH9mEeKUoNuS0eHQtA
-Save-Time: 6/24/13 10:34 AM
+Save-Time: 6/24/13 4:45 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
 Content-Type: text/plain
 Entry-Name: .description
 
-This test must validate that the filter "Sub diff elements" works.
+This test must validate that the filter "Cascading differences" works in the structure merge viewer.
 
 TEST STEPS
 	1) Select the 2 ecore models and run a 2-way comparison (select extlibraryLeft.ecore and extLibrary.ecore) 
 	//asserts that the 2 models are selected
 	//	verify that each difference in the tree contains 0 elements.
-	2) Click on the menu Filters and unselect "Sub diff elements"
+	2) Click on the menu Filters and unselect "Cascading differences"
 	//	verify  that each difference in the tree that previously contains 0 elements, now contains an element or several.
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
