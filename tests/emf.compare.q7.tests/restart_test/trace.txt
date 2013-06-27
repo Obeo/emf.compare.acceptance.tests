@@ -1,0 +1,45 @@
+!SESSION 2013-06-27 10:25:44.654 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.sdk.ide -eclipse.keyring G:\dev\products\compare2\q7\q7workspace\.metadata\.plugins\org.eclipse.pde.core\AUT/secure_storage
+Command-line arguments:  -product org.eclipse.sdk.ide -data G:\dev\products\compare2\q7\aut-eclipse-0 -dev file:G:/dev/products/compare2/q7/q7workspace/.metadata/.plugins/org.eclipse.pde.core/AUT/dev.properties -os win32 -arch x86 -consoleLog -eclipse.keyring G:\dev\products\compare2\q7\q7workspace\.metadata\.plugins\org.eclipse.pde.core\AUT/secure_storage
+
+!ENTRY org.eclipse.osgi 4 0 2013-06-27 10:25:45.806
+!MESSAGE An unexpected runtime error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.getExtensionFiles(BaseStorage.java:1160)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.addExtensionContent(BaseStorage.java:1084)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.processFrameworkExtension(BaseStorage.java:1057)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.bundleChanged(BaseStorage.java:1391)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:847)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEventPrivileged(Framework.java:1568)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1504)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1499)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl.processDelta(PackageAdminImpl.java:541)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl.doResolveBundles(PackageAdminImpl.java:251)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl$1.run(PackageAdminImpl.java:174)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2013-06-27 10:25:45.809
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.getExtensionFiles(BaseStorage.java:1160)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.addExtensionContent(BaseStorage.java:1084)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.processFrameworkExtension(BaseStorage.java:1057)
+	at org.eclipse.osgi.internal.baseadaptor.BaseStorage.bundleChanged(BaseStorage.java:1391)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:847)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEventPrivileged(Framework.java:1568)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1504)
+	at org.eclipse.osgi.framework.internal.core.Framework.publishBundleEvent(Framework.java:1499)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl.processDelta(PackageAdminImpl.java:541)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl.doResolveBundles(PackageAdminImpl.java:251)
+	at org.eclipse.osgi.framework.internal.core.PackageAdminImpl$1.run(PackageAdminImpl.java:174)
+	at java.lang.Thread.run(Unknown Source)

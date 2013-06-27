@@ -1,0 +1,35 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _lMVn8N8CEeKTtdvpG1tutg,_lK-WAd8CEeKTtdvpG1tutg
+Element-Name: compare_test_restart
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _msoZgd2jEeK4b5kSpWWQgw
+Save-Time: 6/27/13 10:33 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+//compare the ecore files
+with [get-view "Package Explorer" | get-tree] {
+    select "Restart_Test/left.ecore" "Restart_Test/right.ecore"
+    get-menu "Compare With/Each Other" | click
+}
+
+//close compare editor
+get-editor "Compare (\'Restart_Test/left.ecore\' - \'Restart_Test/right.ecore\')" | close
+
+//restart eclipse
+get-menu "File/Restart" | click
+wait-until-eclipse-is-ready
+
+//compare again
+with [get-view "Package Explorer" | get-tree] {
+    select "Restart_Test/left.ecore" "Restart_Test/right.ecore"
+    get-menu "Compare With/Each Other" | click
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
