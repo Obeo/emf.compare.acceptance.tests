@@ -1,0 +1,16 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Element-Name: ts010-diagram-class
+Element-Type: testsuite
+Element-Version: 2.0
+Id: _aeNHoepCEeKqnKrf0It1WQ
+Save-Time: 7/11/13 5:59 PM
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
+Content-Type: text/testcase
+Entry-Name: testcase-items
+
+_5n7lQOotEeKCo44K5ZGdqA	// kind: 'test' name: 'ts010_tc001_3-way_conflicts_AddAssociationClass_DelTarget' path: 'diagram/class/ts010_tc001_3-way_conflicts_AddAssociationClass_DelTarget.test'
+
+------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--

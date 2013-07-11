@@ -1,1 +1,0 @@
-like a2 but moving Class1 (force to compute and serialize size !)
