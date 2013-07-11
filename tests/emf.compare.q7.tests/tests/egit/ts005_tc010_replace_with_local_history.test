@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _egRlQHH5EeKUuY9Bwmpkkw
-Save-Time: 4/24/13 12:07 PM
+Save-Time: 7/11/13 11:31 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -61,8 +61,8 @@ get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ec
     | get-menu "Replace With/Local History..." | click
 get-window Compare | get-tree | select ".*" | double-click
 
-get-window Compare | get-tree -after [get-label "Structure Compare"] | select "> library/Writer \\[eClassifiers add\\]"
-with [get-window Compare | get-tree -after [get-label "Structure Compare"]] {
+get-window Compare | get-tree -after [get-label "/library/library.ecore"] -index 1 | select "> library/Writer \\[eClassifiers add\\]"
+with [get-window Compare | get-tree -after [get-label "/library/library.ecore"] -index 1 ] {
     get-property "getItems().length" | equals 1 | verify-true
     get-property "getItems().TreeItem[0].getItems().length" | equals 1 | verify-true
     get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" | equals "Writer [eClassifiers add]" 

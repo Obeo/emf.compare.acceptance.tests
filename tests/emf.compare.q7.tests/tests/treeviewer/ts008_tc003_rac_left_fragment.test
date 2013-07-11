@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _KYn4gN17EeKlP8eyY8UqWw
-Save-Time: 6/25/13 2:32 PM
+Save-Time: 7/11/13 11:40 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -23,7 +23,7 @@ TEST STEPS
 	3) In the SMV, Double-click on the package3 [resource contents add] difference.
 	//asserts that the left part of the CMV contains 2 roots (package3 and package4)
     //asserts that the right part of the CMV contains 2 roots (2 insertion points)
-	//asserts package3 and is associated insertion point are selected
+	//asserts package3 and his associated insertion point are selected
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
@@ -36,7 +36,7 @@ with [get-view "Package Explorer" | get-tree] {
 // Select package4 [packagedElement move] in the SMV
 with [get-editor "Compare (\'TreeViewerResourceAttachmentChange/fragmentOnLeftSide/left.uml\' - \'TreeViewerResourceAttachmentChange/fragmentOnLeftSide/right.uml\')"] {
     get-tree 
-        | select "left.uml <-> right.uml/<Model> root2 \\[resource contents add\\]/<Package> package4 \\[packagedElement move\\]" 
+        | select "<Model> root2 \\[controlled in .*\\]/<Package> package4 \\[packagedElement move\\]" 
         | double-click
     get-tree -after [get-label "TreeViewerResourceAttachmentChange/fragmentOnLeftSide/right.uml"] 
         | select "<Model> root2/<Package> package4"
