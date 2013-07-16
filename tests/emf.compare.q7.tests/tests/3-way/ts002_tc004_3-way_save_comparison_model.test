@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _HBa8gHaLEeKMw-FYxgWKUg
-Save-Time: 4/23/13 1:41 PM
+Save-Time: 7/16/13 5:05 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -46,7 +46,7 @@ with [get-window "Select Common Ancestor"] {
 get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
 set-dialog-result File "platform:/resource/Library/results.xmi"
 get-editor "Compare.*" 
-    | get-button "Save Comparison model" | click
+    | get-button "Save Comparison Model" | click
 get-view "Package Explorer" | get-tree | select Library | get-menu Refresh | click
 get-view "Package Explorer" | get-tree | select "Library/results.xmi" 
     | get-menu "Open With/Sample Reflective Ecore Model Editor" | click

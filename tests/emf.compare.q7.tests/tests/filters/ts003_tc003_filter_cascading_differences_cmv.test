@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _wkq1sNzfEeKf2cO4w_2o0w
-Save-Time: 7/11/13 11:16 AM
+Save-Time: 7/16/13 5:15 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -47,7 +47,7 @@ with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibra
 
 with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {
     get-tree -after [get-label "Library/extlibraryRight.ecore"] 
-        | get-item "extlibrary/                                          " | get-property childCount | equals 1 
+        | get-item "extlibrary/                                          " | get-property childCount | equals 0 
         | verify-true
     get-tree -after [get-label "Library/extlibraryRight.ecore"] -index 1 
         | get-item "extlibrary/Periodical -> Item, TitledItem" | get-property childCount | equals 3 | verify-true
@@ -63,7 +63,7 @@ with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibra
 
 with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibraryRight.ecore\')"] {     
     get-tree -after [get-label "Library/extlibraryRight.ecore"] | get-item extlibrary 
-        | get-item "                                          " -index 2 | get-property childCount | equals 1 
+        | get-item "                                          " -index 2 | get-property childCount | equals 0 
         | verify-true
     get-tree -after [get-label "Library/extlibraryRight.ecore"] -index 1 | get-item "extlibrary/TitledItem" 
         | get-property childCount | equals 1 | verify-true
@@ -73,7 +73,7 @@ with [get-editor "Compare (\'Library/extlibraryLeft.ecore\' - \'Library/extlibra
     get-tree -after [get-label "Library/extlibraryRight.ecore"] | get-item "extlibrary/Magazine -> CirculatingItem" 
         | get-property childCount | equals 3 | verify-true
     get-tree -after [get-label "Library/extlibraryRight.ecore"] -index 1 
-        | get-item "extlibrary/                                          " | get-property childCount | equals 2 
+        | get-item "extlibrary/                                          " | get-property childCount | equals 0 
         | verify-true
 }
 

@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=405274
 Id: _mJM4UaWoEeKzDIfu4QwfoQ
-Save-Time: 4/24/13 2:29 PM
+Save-Time: 7/16/13 5:49 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -36,9 +36,9 @@ with [get-view "Package Explorer" | get-tree] {
 }
 with [get-editor "Compare (\'MergeOppositeRefWithSubDiffFilter/uml/left.uml\' - \'MergeOppositeRefWithSubDiffFilter/uml/right.uml\')"] {
     get-tree | select "> <Model> model/<Association> class1_class0_0 \\[packagedElement add\\]" | double-click
-    get-button "Copy Current Change from Right to Left" | click
+    get-button "Copy Current Change From Right To Left" | click
     get-tree | key-type "M1+z"
-    get-button "Copy Current Change from Left to Right" | click
+    get-button "Copy Current Change From Left To Right" | click
     get-tree | key-type "M1+z"
     close
 }

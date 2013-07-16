@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=399270
 Id: _CPeSAHINEeKUuY9Bwmpkkw
-Save-Time: 6/24/13 12:06 PM
+Save-Time: 7/16/13 5:39 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -53,14 +53,14 @@ with [get-window "Select a Commit"] {
     get-table | select db84a95
     get-button OK | click
 }
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
 //Compare with previous revision
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/Previous Revision" | click
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
@@ -68,7 +68,7 @@ get-editor "Compare library.ecore Current and db84a95..." | close
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/History..." | click
 get-view History | get-table | select db84a95 | double-click
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
@@ -91,7 +91,7 @@ with [get-view History] {
     get-table -after [get-label "File: library/library.ecore [emf-compare-library-egit]"] -index 1 
         | select "library\\/library.ecore" | get-menu "Compare with Version in Ancestor" | click
 }
-get-editor "Compare library.ecore 9763e97... and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore 9763e97... and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore 9763e97... and db84a95..." | close
 
@@ -101,7 +101,7 @@ get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ec
 get-view History | get-table | select "9763e97" | get-menu "Open in Commit Viewer" | click
 get-editor "9763e971 [emf-compare-library-egit]" | get-section "Files (1)" | get-table 
     | select "library\\/library.ecore" | get-menu "Compare with Version in Ancestor" | click
-get-editor "Compare library.ecore 9763e97... and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore 9763e97... and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore 9763e97... and db84a95..." | close
 get-editor "9763e971 [emf-compare-library-egit]" | close
@@ -137,7 +137,7 @@ get-editor "library.ecore" | close
 //Compare with HEAD Revision
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/HEAD Revision" | click
-get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and 9763e97..." | close
 
@@ -148,7 +148,7 @@ with [get-window Compare] {
     get-tree | select "Local/master"
     get-button Compare | click
 }
-get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and 9763e97..." | close
 
@@ -159,7 +159,7 @@ with [get-window Compare] {
     get-tree | select "References/HEAD .*"
     get-button Compare | click
 }
-get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and 9763e97..." | close
 
@@ -167,13 +167,13 @@ get-editor "Compare library.ecore Current and 9763e97..." | close
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/Local History..." | click
 get-view History | get-tree | select ".*" | double-click
-get-editor "Compare library.ecore Current and Current Revision" | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and Current Revision" | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and Current Revision" | close
 
 //Compare with git index
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/Git Index" | click
-get-editor "Compare library.ecore Current and Index" | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and Index" | get-button "Save Comparison Model" 
     | get-property enablement | equals true | verify-true
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
