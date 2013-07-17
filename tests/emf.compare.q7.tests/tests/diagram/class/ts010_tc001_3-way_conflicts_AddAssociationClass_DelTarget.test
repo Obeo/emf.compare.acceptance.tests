@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _5n7lQOotEeKCo44K5ZGdqA
-Save-Time: 7/17/13 4:18 PM
+Save-Time: 7/17/13 5:08 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -56,20 +56,26 @@ TEST STEPS
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-view "Package Explorer" | get-tree | select "CompareDiagrams/ts010_tc001/ancestor.di" "CompareDiagrams/ts010_tc001/left.di" "CompareDiagrams/ts010_tc001/right.di"
 with [get-view "Package Explorer" | get-tree] {
+    select "CompareDiagrams/ts010_tc001/ancestor.di" "CompareDiagrams/ts010_tc001/left.di" "CompareDiagrams/ts010_tc001/right.di"
+    get-menu "Compare With/Each Other" | click
     get-item "CompareDiagrams/ts010_tc001/ancestor.di" | get-property selected | equals true | verify-true
     get-item "CompareDiagrams/ts010_tc001/left.di" | get-property selected | equals true | verify-true
     get-item "CompareDiagrams/ts010_tc001/right.di" | get-property selected | equals true | verify-true
-    get-menu "Compare With/Each Other" | click
 }
-get-window "Select Common Ancestor" | get-button OK | click
+with [get-window "Select Common Ancestor"] {
+    get-button "\'/CompareDiagrams/ts010_tc001/ancestor.di\'" | click
+    get-button OK | click
+}
 get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
-get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')" 
-    | get-tree 
-    | select "> Diagram NewDiagram <Model> model/Shape <Association Class> AssociationClass1 \\[children add\\]" 
-    | double-click
-with [get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')"] {
+
+
+
+with [get-editor "Compare .*"] { 
+    get-tree | select "> Diagram NewDiagram <Model> model/Shape <Association Class> AssociationClass1 \\[children add\\]" 
+    	| double-click
+}
+with [get-editor "Compare .*"] {
     with [get-diagram -index 1 | get-edit-part -name model] {
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
             | equals "#FF0000" | verify-true
@@ -101,11 +107,12 @@ with [get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareD
             | equals 112 | verify-true
     }
 }
-get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')" 
-    | get-tree 
-    | select "> Diagram NewDiagram <Model> model/Connector <Association Class> AssociationClass1 \\[edges delete\\]" 
-    | double-click
-with [get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')"] {
+
+with [get-editor "Compare .*"] { 
+    get-tree | select "> Diagram NewDiagram <Model> model/Connector <Association Class> AssociationClass1 \\[edges delete\\]" 
+    	| double-click
+}
+with [get-editor "Compare .*"] {
     with [get-diagram -index 1 | get-edit-part -name model] {
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().PolylineConnection[0].getBackgroundColor()" 
             | equals "#FF0000" | verify-true
