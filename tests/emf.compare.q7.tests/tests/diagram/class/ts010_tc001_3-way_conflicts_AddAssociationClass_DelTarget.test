@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _5n7lQOotEeKCo44K5ZGdqA
-Save-Time: 7/17/13 3:23 PM
+Save-Time: 7/17/13 3:46 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -61,9 +61,6 @@ with [get-view "Package Explorer" | get-tree] {
     get-menu "Compare With/Each Other" | click
 }
 get-window "Select Common Ancestor" | get-button OK | click
-with [get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')" 
-    | get-tree] {
-}
 get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
 get-editor "Compare (\'CompareDiagrams/ts010_tc001/right.di\' - \'CompareDiagrams/ts010_tc001/left.di\' - \'CompareDiagrams/ts010_tc001/right.di\')" 
     | get-tree 
