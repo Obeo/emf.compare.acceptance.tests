@@ -1,0 +1,66 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_F2X40O0zEeKbEo9e9Onwdw
+Element-Name: ts010_tc105_3-way_positionPhantomsForLists
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _zZqwAe6-EeKNUKs2fNeISQ
+Save-Time: 7/17/13 11:15 AM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test phantoms for lists, in the three viewers
+
+- Position before merge
+- Position after merge
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Package Explorer" | get-tree] {
+    select "CompareDiagrams/ts010_tc014/ancestor.di" "CompareDiagrams/ts010_tc014/left.di" "CompareDiagrams/ts010_tc014/right.di"
+    get-menu "Compare With/Each Other" | click
+}
+get-window "Select Common Ancestor" | get-button OK | click
+get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
+    | get-tree 
+    | select "> Diagram NewDiagram <Model> model/> Shape <Class> H/> BasicCompartment <Class> H/Shape <Property> feature6 \\[children add\\]" 
+    | double-click
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
+    | get-diagram -index 1 | get-edit-part -name model] {
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" 
+        | equals 329 | verify-true
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" 
+        | equals 350 | verify-true
+}
+get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
+    | get-tree 
+    | select "> Diagram NewDiagram <Model> model/> Shape <Class> H/> BasicCompartment <Class> H/Shape <Property> feature2 \\[children delete\\]" 
+    | double-click
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
+    | get-diagram -index 1 | get-edit-part -name model] {
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" 
+        | equals 329 | verify-true
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" 
+        | equals 337 | verify-true
+}
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')"] {
+    get-button "Copy Current Change From Left To Right" | click
+    get-tree 
+        | select "> Diagram NewDiagram <Model> model/> Shape <Class> H/> BasicCompartment <Class> H/Shape <Property> feature6 \\[children add\\]" 
+        | double-click
+}
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
+    | get-diagram -index 1 | get-edit-part -name model] {
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" 
+        | equals 329 | verify-true
+    get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" 
+        | equals 363 | verify-true
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

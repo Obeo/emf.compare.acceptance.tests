@@ -1,0 +1,173 @@
+--- Q7 testcase ---
+Format-Version: 1.0
+Q7-vendor: www.xored.com/q7
+Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_9lhrsO0sEeKbEo9e9Onwdw
+Element-Name: ts010_tc100_3-way_conflicts
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _J1DZAe3wEeKrkrp7_YoINA
+Save-Time: 7/17/13 3:21 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test decorators in conflicts for nodes,  in the three viewers
+
+Checked GENERIC rules:
+
+	- Presence and location of the markers and phantoms:
+		-> Marker around the focused view
+		-> Phantom in the opposite side, in same location and size as the focused view
+		-> Potential marker on the origin side
+		-> No phantom in origin side (never)
+
+	- Context:
+		-> Figures with weakened contours
+
+	- Part of the context becoming the focused one, changing difference selection
+		-> Same properties as the context previously but with strengthened contours and color
+
+	- Only decorators displayed for the selected difference
+
+
+Checked SPECIFIC rules for this test case:
+
+	FOR NODES:
+	
+		- Appearance of decorators:
+			-> Rectangles with strengthened contours
+
+		- Context for cascading differences (nodes in nodes):
+			-> Larger rectangle
+
+	FOR CONFLICTS:
+
+		- Color of decorators:
+			-> Red color
+
+	FOR THIS TEST CASE SPECIFICALLY:
+		
+		- Color of the context:
+			-> Red color
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+with [get-view "Package Explorer" | get-tree] {
+    select "CompareDiagrams/ts010_tc003/ancestor.di" "CompareDiagrams/ts010_tc003/left.di" "CompareDiagrams/ts010_tc003/right.di"
+    get-menu "Compare With/Each Other" | click
+}
+get-window "Select Common Ancestor" | get-button OK | click
+get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc003/right.di\' - \'CompareDiagrams/ts010_tc003/left.di\' - \'CompareDiagrams/ts010_tc003/right.di\')"] {
+    get-tree 
+        | select "> Diagram NewDiagram <Model> model/Shape <Package> D \\[children delete\\]/> DecorationNode <Package> D/Shape <Class> E \\[children add\\]" 
+        | double-click
+    get-button "Show Ancestor Pane" | click
+}
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc003/right.di\' - \'CompareDiagrams/ts010_tc003/left.di\' - \'CompareDiagrams/ts010_tc003/right.di\')"] {
+    with [get-diagram -index 1 | get-edit-part -name model] {
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
+            | equals 2 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
+            | equals "#FF0000" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" 
+            | equals 363 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" 
+            | equals 253 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" 
+            | equals 112 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" 
+            | equals 112 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+        | equals 5 | verify-true
+    }
+    with [get-diagram -index 2 | get-edit-part -name model] {
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
+            | equals 2 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
+            | equals "#FF0000" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" 
+            | equals 369 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" 
+            | equals 259 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" 
+            | equals 100 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" 
+            | equals 100 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLineWidth()" 
+            | equals 1 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getForegroundColor()" 
+            | equals "#FF9999" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().x" 
+            | equals 291 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().y" 
+            | equals 131 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().width" 
+            | equals 310 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().height" 
+            | equals 255 | verify-true
+       	get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+        | equals 6 | verify-true
+    }
+    get-diagram | get-edit-part -name model 
+        | get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+        | equals 4 | verify-true
+}
+get-editor "Compare (\'CompareDiagrams/ts010_tc003/right.di\' - \'CompareDiagrams/ts010_tc003/left.di\' - \'CompareDiagrams/ts010_tc003/right.di\')" 
+    | get-tree | select "> Diagram NewDiagram <Model> model/Shape <Package> D \\[children delete\\]" | double-click
+with [get-editor "Compare (\'CompareDiagrams/ts010_tc003/right.di\' - \'CompareDiagrams/ts010_tc003/left.di\' - \'CompareDiagrams/ts010_tc003/right.di\')"] {
+    with [get-diagram -index 1 | get-edit-part -name model] {
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
+            | equals 2 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
+            | equals "#FF0000" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" 
+            | equals 285 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" 
+            | equals 125 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" 
+            | equals 322 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" 
+            | equals 267 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+            | equals 5 | verify-true
+    }
+    with [get-diagram -index 2 | get-edit-part -name model] {
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
+            | equals 2 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
+            | equals "#FF0000" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" 
+            | equals 291 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" 
+            | equals 131 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" 
+            | equals 310 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" 
+            | equals 255 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+            | equals 5 | verify-true
+    }
+    with [get-diagram | get-edit-part -name model] {
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
+            | equals 2 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getForegroundColor()" 
+            | equals "#FF0000" | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" 
+            | equals 285 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" 
+            | equals 125 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" 
+            | equals 322 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" 
+            | equals 267 | verify-true
+        get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
+            | equals 5 | verify-true
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
