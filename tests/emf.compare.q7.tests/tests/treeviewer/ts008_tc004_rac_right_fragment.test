@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _XgOJcN2SEeKlP8eyY8UqWw
-Save-Time: 6/25/13 2:33 PM
+Save-Time: 7/22/13 1:59 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -56,7 +56,7 @@ with [get-editor "Compare (\'TreeViewerResourceAttachmentChange/fragmentOnRightS
 // Select package3 [resource contents delete] in the SMV
 get-editor "Compare (\'TreeViewerResourceAttachmentChange/fragmentOnRightSide/left.uml\' - \'TreeViewerResourceAttachmentChange/fragmentOnRightSide/right.uml\')" 
     | get-tree 
-    | select " <-> platform:\\/resource\\/TreeViewerResourceAttachmentChange\\/fragmentOnRightSide\\/rightFragment.uml/<Package> package3 \\[resource contents delete\\]" 
+    | select " <-> platform:\\/resource\\/TreeViewerResourceAttachmentChange\\/fragmentOnRightSide\\/rightFragment.uml/<Package> package3 \\[uncontrolled from .*\\]" 
     | double-click
 
 // CMV left side : 2 roots (2 insertion points)
