@@ -5,9 +5,9 @@ Contexts: _LOMGYGrvEeK_JdLra2Bk5A,_BZMegKsqEeKckft8tQOilA
 Element-Name: ts008_tc003_rac_left_fragment
 Element-Type: testcase
 Element-Version: 3.0
-External-Reference: 
+External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=413789
 Id: _KYn4gN17EeKlP8eyY8UqWw
-Save-Time: 7/22/13 2:19 PM
+Save-Time: 7/26/13 11:22 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
