@@ -65,14 +65,33 @@
 			  <injection>
 				<site>http://download.eclipse.org/releases/juno/</site>
 				<features>
-                 <feature>org.eclipse.emf.sdk.feature.group</feature>
-                 <feature>org.eclipse.uml2.sdk.feature.group</feature>
-                 <feature>org.eclipse.emf.ecoretools.sdk.feature.group</feature>
+				 <feature>org.apache.commons.lang</feature>
+				 
+				 <feature>org.eclipse.draw2d.feature.group</feature>
+				
+				 <feature>org.eclipse.emf.ecoretools.sdk.feature.group</feature>
+				 <feature>org.eclipse.emf.facet.sdk.feature.feature.group</feature>
+				 <feature>org.eclipse.emf.query.sdk.feature.group</feature>
+                 <feature>org.eclipse.emf.sdk.feature.group</feature>            
+                 <feature>org.eclipse.emf.transaction.sdk.feature.group</feature>                
+                 <feature>org.eclipse.emf.validation.sdk.feature.group</feature>
+                 <feature>org.eclipse.emf.workspace.feature.group</feature>
+                 
+                 <feature>org.eclipse.gef.sdk.feature.group</feature>
+                 
                  <feature>org.eclipse.gmf.runtime.notation.sdk.feature.group</feature>
-                 <feature>org.eclipse.gmf.feature.group</feature>
                  <feature>org.eclipse.gmf.runtime.sdk.feature.group</feature>
+                 <feature>org.eclipse.gmf.sdk.feature.group</feature>
+                 
                  <feature>org.eclipse.jdt.feature.group</feature>
+                 
+                 <feature>org.eclipse.ocl.all.sdk.feature.group</feature>
+                                 
                  <feature>org.eclipse.papyrus.sdk.feature.feature.group</feature>
+                             
+                 <feature>org.eclipse.uml2.sdk.feature.group</feature>
+                                     
+                 <feature>org.eclipse.xtext.sdk.feature.group</feature>
             	</features>
 			  </injection>
 			  <injection>

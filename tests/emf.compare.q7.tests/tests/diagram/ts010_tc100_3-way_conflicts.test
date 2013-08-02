@@ -7,7 +7,7 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _J1DZAe3wEeKrkrp7_YoINA
-Save-Time: 7/17/13 3:21 PM
+Save-Time: 8/2/13 11:08 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -65,7 +65,7 @@ get-window "Select Common Ancestor" | get-button OK | click
 get-tab-folder -index 1 | get-property activePage | contains "Compare" | verify-true
 with [get-editor "Compare (\'CompareDiagrams/ts010_tc003/right.di\' - \'CompareDiagrams/ts010_tc003/left.di\' - \'CompareDiagrams/ts010_tc003/right.di\')"] {
     get-tree 
-        | select "> Diagram NewDiagram <Model> model/Shape <Package> D \\[children delete\\]/> DecorationNode <Package> D/Shape <Class> E \\[children add\\]" 
+        | select "> Diagram NewDiagram <Model> model/Shape <Package> D \\[children delete\\]/Shape <Class> E \\[children add\\]" 
         | double-click
     get-button "Show Ancestor Pane" | click
 }
