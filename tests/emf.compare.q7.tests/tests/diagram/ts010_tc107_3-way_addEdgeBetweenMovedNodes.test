@@ -8,7 +8,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: __SzScO7EEeKNUKs2fNeISQ
 Q7-Runtime-Version: 1.3.6.201308021142
-Save-Time: 8/7/13 1:23 PM
+Save-Time: 8/7/13 5:29 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -32,15 +32,21 @@ get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagram
 with [get-editor "Compare (\'CompareDiagrams/ts010_tc014/right.di\' - \'CompareDiagrams/ts010_tc014/left.di\' - \'CompareDiagrams/ts010_tc014/right.di\')" 
     | get-diagram -index 1 | get-edit-part -name model] {
     
-    lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().x" -raw] 331 | assert-true "x != 325"
-	gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().x" -raw] 319 | assert-true "x != 325"
-	lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().y" -raw] 400 | assert-true "y != 394"
-	gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().y" -raw] 388 | assert-true "y != 394"			    
-        
-    lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().x" -raw] 141 | assert-true "x != 135"
-	gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().x" -raw] 129 | assert-true "x != 135"
-	lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().y" -raw] 448 | assert-true "y != 442"
-	gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().y" -raw] 436 | assert-true "y != 442"			    
+    let [val x [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().x" -raw]] 	
+	    [val y [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getFirstPoint().y" -raw]] {	
+	    	$x | lt 345 | assert-true "x != 325"
+	        $x | gt 105 | assert-true "x != 325"	
+	        $y | lt 414 | assert-true "y != 394"	
+	        $y | gt 374 | assert-true "y != 394"
+	}
+    
+    let [val x [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().x" -raw]] 	
+	    [val y [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getPolygonPoints().getLastPoint().y" -raw]] {	
+	    	$x | lt 155 | assert-true "x != 135"
+	        $x | gt 115 | assert-true "x != 135"	
+	        $y | lt 462 | assert-true "y != 442"	
+	        $y | gt 422 | assert-true "y != 442"
+	}
     
     get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().FreeformLayeredPane[1].getChildren().ConnectionLayerEx[1].getChildren().AssociationFigure[1].getLineWidth()" 
         | equals 2 | verify-true

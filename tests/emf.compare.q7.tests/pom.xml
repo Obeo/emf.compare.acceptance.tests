@@ -39,8 +39,8 @@
   </repositories>
   
   <properties>
-	<q7-runner-version>1.2.19</q7-runner-version>
-	<q7-maven-version>1.2.19</q7-maven-version>
+	<q7-runner-version>1.3.6-RC1</q7-runner-version>
+	<q7-maven-version>1.3.5</q7-maven-version>
   </properties>
  
   <profiles>
@@ -107,7 +107,7 @@
 		  </suites>
 		  <q7>
 			<version>${q7-runner-version}</version>
-            <licenseFile>${project.basedir}/emfcompare-q7.runner.license</licenseFile>
+            <licenseUrl>http://licensing.xored.com/pool/05bc9cc5-a261-0280-a50e-406c8f046395</licenseUrl>
 		  </q7>
 		</configuration>
 	  </plugin>
