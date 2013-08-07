@@ -8,7 +8,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _6Cqo4O3wEeKrkrp7_YoINA
 Q7-Runtime-Version: 1.3.6.201308021142
-Save-Time: 8/7/13 10:20 AM
+Save-Time: 8/7/13 1:19 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -56,15 +56,15 @@ with [get-editor "Compare (\'CompareDiagrams/ts010_tc002/right.di\' - \'CompareD
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLineWidth()" 
             | equals 2 | verify-true
             
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" -raw] 121 | assert-true "x != 119"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" -raw] 117 | assert-true "x != 119"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" -raw] 152 | assert-true "y != 150"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" -raw] 148 | assert-true "y != 150"			    
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" -raw] 125 | assert-true "x != 119"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().x" -raw] 113 | assert-true "x != 119"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" -raw] 156 | assert-true "y != 150"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getLocation().y" -raw] 144 | assert-true "y != 150"			    
             
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" -raw] 92 | assert-true "width != 90"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" -raw] 88 | assert-true "width != 90"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" -raw] 15 | assert-true "height != 13"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" -raw] 11 | assert-true "height != 13"			        
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" -raw] 96 | assert-true "width != 90"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().width" -raw] 84 | assert-true "width != 90"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" -raw] 19 | assert-true "height != 13"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[4].getSize().height" -raw] 7 | assert-true "height != 13"			        
             
             
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
@@ -74,28 +74,28 @@ with [get-editor "Compare (\'CompareDiagrams/ts010_tc002/right.di\' - \'CompareD
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLineWidth()" 
             | equals 2 | verify-true
             
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" -raw] 120 | assert-true "x != 118"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" -raw] 116 | assert-true "x != 118"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" -raw] 151 | assert-true "y != 149"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" -raw] 147 | assert-true "y != 149"			       
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" -raw] 124 | assert-true "x != 118"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().x" -raw] 112 | assert-true "x != 118"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" -raw] 155 | assert-true "y != 149"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getLocation().y" -raw] 143 | assert-true "y != 149"			       
         
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().width" -raw] 95 | assert-true "width != 93"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().width" -raw] 91 | assert-true "width != 93"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().height" -raw] 5 | assert-true "height != 3"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().height" -raw] 1 | assert-true "height != 3"
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().width" -raw] 99 | assert-true "width != 93"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().width" -raw] 87 | assert-true "width != 93"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().height" -raw] 9 | assert-true "height != 3"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().Polyline[4].getSize().height" -raw] 0 | assert-true "height != 3"
         
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLineWidth()" 
             | equals 1 | verify-true
             
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().x" -raw] 116 | assert-true "x != 114"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().x" -raw] 112 | assert-true "x != 114"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().y" -raw] 77 | assert-true "y != 75"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().y" -raw] 73 | assert-true "y != 75"			        
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().x" -raw] 120 | assert-true "x != 114"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().x" -raw] 108 | assert-true "x != 114"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().y" -raw] 81 | assert-true "y != 75"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getLocation().y" -raw] 69 | assert-true "y != 75"			        
             
-        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().width" -raw] 102 | assert-true "width != 100"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().width" -raw] 98 | assert-true "width != 100"
-		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().height" -raw] 102 | assert-true "height != 100"
-		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().height" -raw] 98 | assert-true "height != 100"    
+        lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().width" -raw] 106 | assert-true "width != 100"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().width" -raw] 94 | assert-true "width != 100"
+		lt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().height" -raw] 106 | assert-true "height != 100"
+		gt [get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().RectangleFigure[5].getSize().height" -raw] 94 | assert-true "height != 100"    
             
         get-property "getViewport().getChildren().FreeformLayeredPane[0].getChildren().DiagramScalableFreeformLayeredPane[0].getChildren().size()" 
             | equals 6 | verify-true
