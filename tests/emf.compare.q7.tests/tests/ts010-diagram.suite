@@ -5,7 +5,8 @@ Element-Name: ts010-diagram
 Element-Type: testsuite
 Element-Version: 2.0
 Id: _aeNHoepCEeKqnKrf0It1WQ
-Save-Time: 7/17/13 2:07 PM
+Q7-Runtime-Version: 1.3.6.201308021142
+Save-Time: 8/29/13 2:57 PM
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8
 Content-Type: text/testcase
@@ -20,5 +21,6 @@ _TwHWEO7DEeKNUKs2fNeISQ	// kind: 'test' name: 'ts010_tc106_2-way_lookChangeForEd
 _ArAlUO4yEeKrkrp7_YoINA	// kind: 'test' name: 'ts010_tc104_3-way_localAndRemoteChanges' path: 'diagram/ts010_tc104_3-way_localAndRemoteChanges.test'
 _zZqwAe6-EeKNUKs2fNeISQ	// kind: 'test' name: 'ts010_tc105_3-way_positionPhantomsForLists' path: 'diagram/ts010_tc105_3-way_positionPhantomsForLists.test'
 _J1DZAe3wEeKrkrp7_YoINA	// kind: 'test' name: 'ts010_tc100_3-way_conflicts' path: 'diagram/ts010_tc100_3-way_conflicts.test'
+_C96NgRCLEeOIYPF2j1IOPg	// kind: 'test' name: 'ts010_tc109_3-way_addEdgeBetweenMovedAndAddedNodes' path: 'diagram/ts010_tc109_3-way_addEdgeBetweenMovedAndAddedNodes.test'
 
 ------=_testcase-items-62c497da-4241-31f4-811a-6b453a3ecff8--
