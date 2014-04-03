@@ -7,8 +7,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: http://wiki.eclipse.org/EMF_Compare/Specifications/ProvideContentMergeViewerForResourceAttachmentChanges
 Id: _FnMz0HUjEeKHfa7Gozlrbw
-Q7-Runtime-Version: 1.3.7.201309090800
-Save-Time: 9/13/13 10:05 AM
+Q7-Runtime-Version: 1.3.10.201312200736
+Save-Time: 4/3/14 3:05 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -47,35 +47,37 @@ with [get-window "Select Common Ancestor"] {
     get-button OK | click
 }
 
-
 get-editor "Compare .*" 
-    | get-tree | get-item "> Conflicts" | get-property childCount | equals 0 | verify-true
+    | get-tree | get-property itemCount | equals 2 | verify-true
+
 with [get-editor "Compare .*" 
     | get-tree] {
-    get-item "> Left side" | get-property childCount | equals 1 | verify-true
-    get-item "> Left side/left.uml <-> right.uml \\(origin.uml\\)" | get-property childCount | equals 2 | verify-true
-    get-item "> Left side" | get-property "getItems().TreeItem[0].getItems().length" | equals 2 | verify-true
-    get-item "> Left side" | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" 
+    get-item "> Left Side" | get-property index | equals 0 | verify-true
+    get-item "> Left Side" | get-property childCount | equals 1 | verify-true
+    get-item "> Left Side/left.uml <-> right.uml \\(origin.uml\\)" | get-property childCount | equals 2 | verify-true
+    get-item "> Left Side" | get-property "getItems().TreeItem[0].getItems().length" | equals 2 | verify-true
+    get-item "> Left Side" | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" 
         | equals "<Model> new root left [controlled in platform:/resource/MultipleResourceAttachmentChange/left.uml]" 
         | verify-true
-    get-item "> Left side" | get-property "getItems().TreeItem[0].getItems().TreeItem[1].getText()" 
+    get-item "> Left Side" | get-property "getItems().TreeItem[0].getItems().TreeItem[1].getText()" 
         | equals "<Model> another new root left [controlled in platform:/resource/MultipleResourceAttachmentChange/left.uml]" 
         | verify-true
 }
+
 with [get-editor "Compare .*" 
     | get-tree] {
-    get-item "> Right side" | get-property index | equals 2 | verify-true
-    get-item "> Right side" | get-property childCount | equals 1 | verify-true
-    get-item "> Right side" | get-property "getItems().length" | equals 1 | verify-true
-    get-item "> Right side" | get-property "getItems().TreeItem[0].getItems().length" | equals 1 | verify-true
-    get-item "> Right side/left.uml <-> right.uml \\(origin.uml\\)" | get-property childCount | equals 1 | verify-true
-    get-item "> Right side" | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" 
+    get-item "> Right Side" | get-property index | equals 1 | verify-true
+    get-item "> Right Side" | get-property childCount | equals 1 | verify-true
+    get-item "> Right Side" | get-property "getItems().length" | equals 1 | verify-true
+    get-item "> Right Side" | get-property "getItems().TreeItem[0].getItems().length" | equals 1 | verify-true
+    get-item "> Right Side/left.uml <-> right.uml \\(origin.uml\\)" | get-property childCount | equals 1 | verify-true
+    get-item "> Right Side" | get-property "getItems().TreeItem[0].getItems().TreeItem[0].getText()" 
         | equals "<Model> new root right [controlled in platform:/resource/MultipleResourceAttachmentChange/right.uml]" 
         | verify-true
 }
 with [get-editor "Compare .*"] {
     get-tree 
-        | select "> Left side/left.uml <-> right.uml \\(origin.uml\\)/<Model> new root left \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml\\]" 
+        | select "> Left Side/left.uml <-> right.uml \\(origin.uml\\)/<Model> new root left \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml\\]" 
         | double-click
     get-button "Show Ancestor Pane" | click
 }
@@ -108,7 +110,7 @@ with [get-editor "Compare .*"] {
 }
 get-editor "Compare .*" 
     | get-tree 
-    | select "> Left side/left.uml <-> right.uml \\(origin.uml\\)/<Model> another new root left \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml\\]" 
+    | select "> Left Side/left.uml <-> right.uml \\(origin.uml\\)/<Model> another new root left \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/left.uml\\]" 
     | double-click
 with [get-editor "Compare .*"] {
     get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"] 
@@ -142,7 +144,7 @@ with [get-editor "Compare .*"] {
 }
 get-editor "Compare .*" 
     | get-tree 
-    | select "> Right side/left.uml <-> right.uml \\(origin.uml\\)/<Model> new root right \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml\\]" 
+    | select "> Right Side/left.uml <-> right.uml \\(origin.uml\\)/<Model> new root right \\[controlled in platform:\\/resource\\/MultipleResourceAttachmentChange\\/right.uml\\]" 
     | double-click
 with [get-editor "Compare .*"] {
     get-tree -after [get-label "MultipleResourceAttachmentChange/right.uml"] 
@@ -171,4 +173,5 @@ with [get-editor "Compare .*"] {
             | get-property childCount | equals 0 | verify-true
     }
 }
+
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

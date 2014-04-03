@@ -7,8 +7,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: __z4R4ZxUEeK1qPdYnWkCpA
-Q7-Runtime-Version: 1.3.7.201309090800
-Save-Time: 9/13/13 10:23 AM
+Q7-Runtime-Version: 1.3.10.201312200736
+Save-Time: 4/3/14 4:02 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -46,6 +46,9 @@ with [get-window "Select Common Ancestor"] {
 get-editor "Compare .*" 
     | get-button Groups | click -arrow
 get-menu "By Side" | click
+
+get-window "Group preference" | get-button No | click
+
 get-editor "Compare .*" 
     | get-tree | select "> Conflicts" | expand-all
 with [get-editor "Compare .*" 
@@ -84,9 +87,15 @@ with [get-editor "Compare .*"
 get-editor "Compare .*" 
     | get-button Filters | click -arrow
 get-menu "Pseudo conflicts differences" | click
+
+get-window "Filters preference" | get-button No | click
+
 get-editor "Compare .*" 
     | get-button Filters | click -arrow
 get-menu "Cascading differences" | click
+
+get-window "Filters preference" | get-button No | click
+
 get-editor "Compare .*" 
     | get-tree | select "> Conflicts" | expand-all
 with [get-editor "Compare .*" 
