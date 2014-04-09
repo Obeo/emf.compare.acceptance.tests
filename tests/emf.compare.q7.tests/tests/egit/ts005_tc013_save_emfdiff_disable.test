@@ -8,7 +8,7 @@ Element-Version: 3.0
 External-Reference: https://bugs.eclipse.org/bugs/show_bug.cgi?id=399270
 Id: _CPeSAHINEeKUuY9Bwmpkkw
 Q7-Runtime-Version: 1.3.10.201312200736
-Save-Time: 3/28/14 5:40 PM
+Save-Time: 4/9/14 5:57 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -65,24 +65,20 @@ get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Com
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
-//Compare with history
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
-    | get-menu "Compare With/History..." | click
-get-view History | get-table | select db84a95 | double-click
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
-    | get-property enablement | equals false | verify-true
-get-editor "Compare library.ecore Current and db84a95..." | close
+    | get-menu "Team/Show in History" | click
 
 //Compare with workspace (formerly Compare With Working Directory)
+get-view History | get-table | select db84a95
 get-view History | get-table -after [get-label "File: library/library.ecore [emf-compare-library-egit]"] -index 1 
     | select "library\\/library.ecore" | get-menu "Compare with Workspace" | click
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
 //Compare with workspace (formerly compare With Working Tree)
 get-view History | get-table | select db84a95 | get-menu "Compare with Workspace" | click
-get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison model" 
+get-editor "Compare library.ecore Current and db84a95..." | get-button "Save Comparison Model" 
     | get-property enablement | equals false | verify-true
 get-editor "Compare library.ecore Current and db84a95..." | close
 
@@ -146,7 +142,7 @@ get-editor "Compare library.ecore Current and 9763e97..." | close
 get-view "Package Explorer" | get-tree | select "(> )?library .*/(> )?library.ecore" 
     | get-menu "Compare With/Branch, Tag, or Reference..." | click
 with [get-window Compare] {
-    get-tree | select "Local/master"
+    get-tree | select "Local/master.*"
     get-button Compare | click
 }
 get-editor "Compare library.ecore Current and 9763e97..." | get-button "Save Comparison Model" 
