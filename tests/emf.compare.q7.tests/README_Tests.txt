@@ -1,8 +1,13 @@
 -------------------------------------------------------------------------------
-ts007_merge :
+ts001_2-way :
 -------------------------------------------------------------------------------
 
-* ts007_tc003 : the button copy current change form left to right doesn't select the next difference (in the structure and content merge viewers) after merge.
-			    (https://bugs.eclipse.org/bugs/show_bug.cgi?id=400691)
+* ts001_tc002 : CMV doesn't collapse
 			    
+-------------------------------------------------------------------------------
+ts005_egit :
+-------------------------------------------------------------------------------
 
+* ts005_tc014 to ts005_tc018 : These cases have to be managed. 
+							   The comparison can't be launched from these actions. Is this a bug from EGit, or from EMF Compare ?
+							   Need further investigations
