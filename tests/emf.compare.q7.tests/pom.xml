@@ -68,18 +68,17 @@
 				 <feature>org.eclipse.emf.transaction.feature.group</feature>
                  <feature>org.eclipse.emf.validation.sdk.feature.group</feature>
                  <feature>org.eclipse.emf.workspace.feature.group</feature>
+				 <feature>org.eclipse.emf.facet.sdk.feature.feature.group</feature>
 				 
 				 <feature>org.eclipse.draw2d.feature.group</feature>
                  <feature>org.eclipse.gef.sdk.feature.group</feature>
-                 <feature>org.eclipse.gmf.feature.group</feature>            
-                 <feature>org.eclipse.gmf.runtime.notation.feature.group</feature>  
+                 <feature>org.eclipse.gmf.sdk.feature.group</feature>
+                 <feature>org.eclipse.gmf.runtime.sdk.feature.group</feature>
+                 <feature>org.eclipse.gmf.runtime.notation.sdk.feature.group</feature>
                                
-                 <feature>org.eclipse.papyrus.infra.core.feature.feature.group</feature>
-                 <feature>org.eclipse.papyrus.infra.emf.feature.feature.group</feature>
-                 <feature>org.eclipse.papyrus.infra.gmfdiag.feature.feature.group</feature>
-                 <feature>org.eclipse.papyrus.uml.diagram.feature.feature.group</feature>
-                 <feature>org.eclipse.papyrus.uml.tools.feature.feature.group</feature>
-                                     
+                 <feature>org.eclipse.papyrus.sdk.feature.feature.group</feature>
+                 
+                 <feature>org.eclipse.xtend.sdk.feature.group</feature>
                  <feature>org.eclipse.xtext.sdk.feature.group</feature>
             	</features>
 			  </injection>
