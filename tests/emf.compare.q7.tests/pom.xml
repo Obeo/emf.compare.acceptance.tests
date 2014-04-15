@@ -28,7 +28,7 @@
 	<repository>
 		<id>thirdparty</id>
 		<name>Eclipse AUT repository</name>
-		<url>http://sandbox.obeo.fr/maven/aut/</url>
+		<url>http://maven.obeo.fr/aut/</url>
 	</repository>
   </repositories>
   
