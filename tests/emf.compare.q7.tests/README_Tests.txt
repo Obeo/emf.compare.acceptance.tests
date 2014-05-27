@@ -36,3 +36,11 @@ ts010_tc108_3-way_addListNodeInMovedContainer
 ts010_tc109_3-way_addEdgeBetweenMovedAndAddedNodes
 
 https://bugs.eclipse.org/bugs/show_bug.cgi?id=435743
+
+-------------------------------------------------------------------------------
+ts003_tc012_not_reseting_filter_after_save
+ts004_tc006_not_reseting_group_after_save
+
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=432033
+
+
