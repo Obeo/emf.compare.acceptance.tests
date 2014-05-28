@@ -54,7 +54,7 @@
 		  <aut>
 			<groupId>org.eclipse</groupId>
 			<artifactId>sdk</artifactId>
-			<version>4.4M6</version>
+			<version>4.4RC2</version>
 			<injections>
 			  <injection>
 				<site>http://download.eclipse.org/releases/luna/</site>

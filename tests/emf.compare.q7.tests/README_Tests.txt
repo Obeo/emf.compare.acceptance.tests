@@ -13,14 +13,6 @@ ts001_tc002_2-way_synchro_smv_cmv
 Bug https://bugs.eclipse.org/bugs/show_bug.cgi?id=435612
 
 -------------------------------------------------------------------------------
-ts003_tc004_filter_uml_refined_elements_cmv
-ts003_tc010_filter_uml_refined_elements
-ts007_tc005_merge_opposite_subdiff_filter
-ts007_tc005_merge_opposite_subdiff_filter
-
-Bug https://bugs.eclipse.org/bugs/show_bug.cgi?id=435617
-
--------------------------------------------------------------------------------
 ts010_tc100_3-way_conflicts
 
 https://bugs.eclipse.org/bugs/show_bug.cgi?id=435635
