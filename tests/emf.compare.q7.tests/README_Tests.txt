@@ -18,18 +18,6 @@ ts010_tc100_3-way_conflicts
 https://bugs.eclipse.org/bugs/show_bug.cgi?id=435635
 
 -------------------------------------------------------------------------------
-test ts010_tc100_3-way_conflicts
-ts010_tc101_3-way_conflicts
-ts010_tc102_3-way_conflicts
-ts010_tc104_3-way_localAndRemoteChanges
-ts010_tc105_3-way_positionPhantomsForLists
-ts010_tc107_3-way_addEdgeBetweenMovedNodes
-ts010_tc108_3-way_addListNodeInMovedContainer
-ts010_tc109_3-way_addEdgeBetweenMovedAndAddedNodes
-
-https://bugs.eclipse.org/bugs/show_bug.cgi?id=435743
-
--------------------------------------------------------------------------------
 ts003_tc012_not_reseting_filter_after_save
 ts004_tc006_not_reseting_group_after_save
 
