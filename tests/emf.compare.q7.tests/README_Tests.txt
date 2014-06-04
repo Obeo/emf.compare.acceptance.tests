@@ -13,14 +13,3 @@ ts001_tc002_2-way_synchro_smv_cmv
 Bug https://bugs.eclipse.org/bugs/show_bug.cgi?id=435612
 
 -------------------------------------------------------------------------------
-ts010_tc100_3-way_conflicts
-
-https://bugs.eclipse.org/bugs/show_bug.cgi?id=435635
-
--------------------------------------------------------------------------------
-ts003_tc012_not_reseting_filter_after_save
-ts004_tc006_not_reseting_group_after_save
-
-https://bugs.eclipse.org/bugs/show_bug.cgi?id=432033
-
-
